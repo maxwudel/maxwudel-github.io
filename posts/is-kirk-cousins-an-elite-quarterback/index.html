@@ -251,8 +251,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">colour =</span> <span class="st">"purple"</span></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"Quarterback"</span>, </span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"2021 Passing Yards"</span>, </span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">x=</span><span class="st">"2021 Passing Yards"</span>, </span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">y=</span><span class="st">"Quarterback"</span>, </span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Kirk Cousins was right there with the rest"</span>, </span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Cousins knows how to air it out and even threw for more yards than the NFL MVP, Aaron Rodgers"</span>, </span>
 <span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Max Wudel"</span></span>
@@ -300,10 +300,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">15</span>, <span class="at">y=</span><span class="dv">13</span>, <span class="at">label=</span><span class="st">"More Ints, Less Tds"</span>), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
 <span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
 <span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>kirk21, </span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>TD, <span class="at">y=</span>Int, <span class="at">label=</span>Player),<span class="at">size=</span><span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>TD, <span class="at">y=</span>Int, <span class="at">label=</span>Player),<span class="at">size=</span><span class="fl">3.5</span>) <span class="sc">+</span></span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>outliers, </span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>TD, <span class="at">y=</span>Int, <span class="at">label=</span>Player),<span class="at">size=</span><span class="dv">3</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>TD, <span class="at">y=</span>Int, <span class="at">label=</span>Player),<span class="at">size=</span><span class="fl">3.5</span></span>
 <span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Cousins was among the best when targeting the endzone"</span>, <span class="at">subtitle=</span><span class="st">"He was among the best when throwing to the endzone and away from his defenders."</span>, <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Max Wudel"</span>)  <span class="sc">+</span> <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
 <span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
@@ -371,7 +371,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Here we see why the elite are named as such. Players like Rodgers, Brady, Brees and Wilson have been premier quarterbacks within the NFL for years and the data represents that. While Cousins’ QBR has been on a downward trend since 2015, he has remained above and around the league’s average.</p>
 <p>Kirk Cousins has been an NFL starting quarterback for seven years and in each of those years he has had a new offensive coordinator. While he himself has been a very consistent quarterback, he has not had consistent playbooks and personnel around him.</p>
-<p>After firing their head coach and general manager, the Minnesota Vikings have hired head coach Kevin O’Connel and general manager Kwesi Adofo-Mensah</p>
+<p>After firing their head coach and general manager, the Minnesota Vikings have hired head coach Kevin O’Connell and general manager Kwesi Adofo-Mensah. The Vikings also signed Cousins to a one-year extension worth $35 million.</p>
+<p>Currently, the Vikings are 7-1 and sit comfortably atop the NFC North and at second place in the NFC. Cousins is now quarterbacking a team that finds ways to finish games as opposed to losing them. Now that the Vikings are winning games much less has been said about their starting quarterback.</p>
+<p>If the Vikings make a push this year the public perception of Kirk Cousins might finally change for the better.</p>
 
 
 
