@@ -320,21 +320,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>ORtg, <span class="at">y=</span>DRtg, <span class="at">label=</span>Team),</span>
 <span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_y =</span> .<span class="dv">58</span></span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Brook Lopez solidifies Milwaukee"</span>, </span>
-<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>       <span class="at">subtitle=</span><span class="st">"Lopez's return sparked Milwaukee's rise from 14th to 4th in defensive rating"</span>,   </span>
-<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Max Wudel"</span>,</span>
-<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Offensive Rating"</span>,</span>
-<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Defensive Rating"</span>)  <span class="sc">+</span> </span>
-<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fl">112.5</span>, <span class="at">y=</span><span class="dv">118</span>, <span class="at">label=</span><span class="st">"Bad Offense, Bad Defense"</span>), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">118</span>, <span class="at">y=</span><span class="fl">110.5</span>, <span class="at">label=</span><span class="st">"Great Defense, Great Offense"</span>), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">size =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"black"</span>))) <span class="sc">+</span></span>
-<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>), </span>
-<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>), </span>
-<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Brook Lopez solidifies Milwaukee"</span>, </span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Lopez's return sparked Milwaukee's rise from 14th to 4th in defensive rating"</span>,   </span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Max Wudel"</span>,</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Offensive Rating"</span>,</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Defensive Rating"</span>)  <span class="sc">+</span> </span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fl">112.5</span>, <span class="at">y=</span><span class="dv">118</span>, <span class="at">label=</span><span class="st">"Bad Offense, Bad Defense"</span>), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">118</span>, <span class="at">y=</span><span class="fl">110.5</span>, <span class="at">label=</span><span class="st">"Great Defense, Great Offense"</span>), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">size =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"black"</span>))) <span class="sc">+</span></span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">8</span>), </span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>), </span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
@@ -397,12 +398,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </details>
 <div class="cell-output-display">
 
-<div id="ahprsymsur" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="dbcmrarrvc" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#ahprsymsur) .gt_table {
+:where(#dbcmrarrvc) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -427,7 +428,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_heading {
+:where(#dbcmrarrvc) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -439,7 +440,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_title {
+:where(#dbcmrarrvc) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -451,7 +452,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-:where(#ahprsymsur) .gt_subtitle {
+:where(#dbcmrarrvc) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -463,13 +464,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-:where(#ahprsymsur) .gt_bottom_border {
+:where(#dbcmrarrvc) .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_col_headings {
+:where(#dbcmrarrvc) .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -484,7 +485,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_col_heading {
+:where(#dbcmrarrvc) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -504,7 +505,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#ahprsymsur) .gt_column_spanner_outer {
+:where(#dbcmrarrvc) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -516,15 +517,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-:where(#ahprsymsur) .gt_column_spanner_outer:first-child {
+:where(#dbcmrarrvc) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#ahprsymsur) .gt_column_spanner_outer:last-child {
+:where(#dbcmrarrvc) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#ahprsymsur) .gt_column_spanner {
+:where(#dbcmrarrvc) .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -536,7 +537,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-:where(#ahprsymsur) .gt_group_heading {
+:where(#dbcmrarrvc) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -561,7 +562,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#ahprsymsur) .gt_empty_group_heading {
+:where(#dbcmrarrvc) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -576,15 +577,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#ahprsymsur) .gt_from_md > :first-child {
+:where(#dbcmrarrvc) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#ahprsymsur) .gt_from_md > :last-child {
+:where(#dbcmrarrvc) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#ahprsymsur) .gt_row {
+:where(#dbcmrarrvc) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -603,7 +604,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#ahprsymsur) .gt_stub {
+:where(#dbcmrarrvc) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -616,7 +617,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ahprsymsur) .gt_stub_row_group {
+:where(#dbcmrarrvc) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -630,11 +631,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-:where(#ahprsymsur) .gt_row_group_first td {
+:where(#dbcmrarrvc) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#ahprsymsur) .gt_summary_row {
+:where(#dbcmrarrvc) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -644,16 +645,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ahprsymsur) .gt_first_summary_row {
+:where(#dbcmrarrvc) .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_first_summary_row.thick {
+:where(#dbcmrarrvc) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#ahprsymsur) .gt_last_summary_row {
+:where(#dbcmrarrvc) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -663,7 +664,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_grand_summary_row {
+:where(#dbcmrarrvc) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -673,7 +674,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ahprsymsur) .gt_first_grand_summary_row {
+:where(#dbcmrarrvc) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -683,11 +684,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_striped {
+:where(#dbcmrarrvc) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#ahprsymsur) .gt_table_body {
+:where(#dbcmrarrvc) .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -696,7 +697,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_footnotes {
+:where(#dbcmrarrvc) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -710,7 +711,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_footnote {
+:where(#dbcmrarrvc) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -719,7 +720,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ahprsymsur) .gt_sourcenotes {
+:where(#dbcmrarrvc) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -733,7 +734,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#ahprsymsur) .gt_sourcenote {
+:where(#dbcmrarrvc) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -741,64 +742,64 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#ahprsymsur) .gt_left {
+:where(#dbcmrarrvc) .gt_left {
   text-align: left;
 }
 
-:where(#ahprsymsur) .gt_center {
+:where(#dbcmrarrvc) .gt_center {
   text-align: center;
 }
 
-:where(#ahprsymsur) .gt_right {
+:where(#dbcmrarrvc) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#ahprsymsur) .gt_font_normal {
+:where(#dbcmrarrvc) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#ahprsymsur) .gt_font_bold {
+:where(#dbcmrarrvc) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#ahprsymsur) .gt_font_italic {
+:where(#dbcmrarrvc) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#ahprsymsur) .gt_super {
+:where(#dbcmrarrvc) .gt_super {
   font-size: 65%;
 }
 
-:where(#ahprsymsur) .gt_footnote_marks {
+:where(#dbcmrarrvc) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#ahprsymsur) .gt_asterisk {
+:where(#dbcmrarrvc) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#ahprsymsur) .gt_indent_1 {
+:where(#dbcmrarrvc) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#ahprsymsur) .gt_indent_2 {
+:where(#dbcmrarrvc) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#ahprsymsur) .gt_indent_3 {
+:where(#dbcmrarrvc) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#ahprsymsur) .gt_indent_4 {
+:where(#dbcmrarrvc) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#ahprsymsur) .gt_indent_5 {
+:where(#dbcmrarrvc) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -853,7 +854,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Despite this, Milwaukee still finished with a score of .67 which is well above the rest of the Eastern Conference playoff teams. The standout here is the Atlanta Hawks. They finish as the seven seed in the eastern conference and have not been in the eyes of those predicting champions. Unfortunately for them, they have to play the Boston Celtics in the first round who hold the score for most exceptional offense in the Eastern Conference.</p>
 <p>During Khris Middleton’s absence, Jrue Holiday has adapted a larger role for Milwaukee’s offense and his production has soared because of it. With Middleton returning to the starting lineup, Holiday will be able to focus more on his defensive prowess. The same goes for Bobby Portis. He adapted a starting role last year with Lopez sidelined with a back injury and has since returned to the bench. Portis’s increased production has translated to his role on the bench as he is now one of the three nominees for Sixth Man of the Year.</p>
 <p>Milwaukee’s run to the finals will be nothing short of difficult. Boston, Philadelphia and Cleveland have cemented themselves as powerhouses this season. Boston holds the best offense in the eastern conference and Cleveland boasts the best defense in the NBA. Philadelphia has the MVP front runner in Joel Embiid and a hunger to reach the Eastern Conference Finals.</p>
-<p>To even make an appearance in the Finals, Milwaukee is going to have to increase the efficiency of their shooting. Jrue Holiday and Khris Middleton will need be there when Antetokounmpo passes it out to them. Defense has not been the issue for Milwaukee this season as they finished fourth in the league in defensive rating. Milwaukee will have to dominate the board and in transition if they want to win their third total championship</p>
+<p>To even make an appearance in the Finals, Milwaukee is going to have to increase the efficiency of their shooting. Jrue Holiday and Khris Middleton will need be there when Antetokounmpo passes it out to them. Defense has not been the issue for Milwaukee this season as they finished fourth in the league in defensive rating. Milwaukee will have to dominate the board and in transition if they want to win their third total championship.</p>
 
 
 
