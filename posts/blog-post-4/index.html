@@ -175,8 +175,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div class="quarto-title column-body">
       <h1 class="title">Giannis Antetekounmpo Vs. Anthony Davis</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">milwaukee</div>
-                <div class="quarto-category">nba</div>
+                <div class="quarto-category">giannis</div>
+                <div class="quarto-category">davis</div>
                 <div class="quarto-category">analysis</div>
               </div>
                   </div>
@@ -350,6 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Usage rating is a metric involving an estimate of the percentage of team plays used by a player while they were on the court. In the 2022-23 regular season, Giannis led all players with a usage rating of 38.8% and finished behind league MVP Joel Embiid in points per game. That meant that on any given possession, there was nearly a 40% chance that Giannis was going to initiate Milwaukee’s offense.</p>
 <p>Anthony Davis finished with a usage rating of 28.4% which is actually the same as his career average. Davis’s usage rating peaked in 2016 at 32.6% but those numbers have stayed rather consistent. Davis finished in the top 10 for both usage rating and points per game when compared to other bigs and it marks his return to dominance.</p>
+<p>Contrary to what the media might want you to think, there is far more to basektball than just scoring points. Especcialy when it comes to bigs. They are expected to be a commanding force on both the offensive and defensive side of the ball. Davis is a three time block champion and has been named to the NBA All Defense team four times in his career. Giannis was the 2019-20 Defensive Player of the Year and has been named to the NBA All Defense team five times in his career. Its safe to say that there arent many players that enjoy being defended by either of these players. Lets take a look at how their offensive and defensive ratings reflected their ammount of win shares.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -370,48 +371,56 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>ratingsadvanced, </span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Ortg, <span class="at">y=</span>Drtg, <span class="at">size=</span>WS), </span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">color=</span><span class="st">"lightgrey"</span>, </span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha=</span>.<span class="dv">5</span>) <span class="sc">+</span> </span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>giannis,</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Ortg, <span class="at">y=</span>Drtg, <span class="at">size=</span>WS),</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">color=</span><span class="st">"#00471B"</span>) <span class="sc">+</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>davis,</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Ortg, <span class="at">y=</span>Drtg, <span class="at">size=</span>WS),</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">color=</span><span class="st">"#552583"</span>) <span class="sc">+</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>embiid,</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Ortg, <span class="at">y=</span>Drtg, <span class="at">size=</span>WS),</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">color=</span><span class="st">"black"</span>) <span class="sc">+</span></span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">119.7348</span>) <span class="sc">+</span> </span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">113.3035</span>) <span class="sc">+</span></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>theboys2, </span>
-<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Ortg, <span class="at">y=</span>Drtg, <span class="at">label=</span>Player),</span>
-<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_y =</span> <span class="fl">1.2</span></span>
-<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Bigger isnt always better, ask a golfer"</span>, </span>
-<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Davis returned to form as he dominated the defensive paint"</span>,   </span>
-<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Max Wudel"</span>,</span>
-<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Offensive Rating"</span>,</span>
-<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Defensive Rating"</span>)  <span class="sc">+</span> </span>
-<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">109</span>, <span class="at">y=</span><span class="dv">118</span>, <span class="at">label=</span><span class="st">"Bad Offense, Bad Defense"</span>), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">131</span>, <span class="at">y=</span><span class="dv">104</span>, <span class="at">label=</span><span class="st">"Great Defense, Great Offense"</span>), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">size =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"black"</span>))) <span class="sc">+</span></span>
-<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
-<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
-<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>), </span>
-<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>), </span>
-<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
-<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">alpha=</span>.<span class="dv">5</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span> </span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>giannis,</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Ortg, <span class="at">y=</span>Drtg, <span class="at">size=</span>WS),</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">color=</span><span class="st">"#00471B"</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>davis,</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Ortg, <span class="at">y=</span>Drtg, <span class="at">size=</span>WS),</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">color=</span><span class="st">"#552583"</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>embiid,</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Ortg, <span class="at">y=</span>Drtg, <span class="at">size=</span>WS),</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>  <span class="at">color=</span><span class="st">"#006BB6"</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fl">119.7348</span>) <span class="sc">+</span> </span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fl">113.3035</span>) <span class="sc">+</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">data=</span>theboys2, </span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">x=</span>Ortg, <span class="at">y=</span>Drtg, <span class="at">label=</span>Player),</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">nudge_y =</span> <span class="fl">1.2</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">title=</span><span class="st">"Bigger isnt always better, ask a golfer"</span>, </span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle=</span><span class="st">"Davis returned to form as he dominated the defensive paint"</span>,   </span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>       <span class="at">caption=</span><span class="st">"Source: Sports Reference | By Max Wudel"</span>,</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>       <span class="at">x=</span><span class="st">"Offensive Rating"</span>,</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>       <span class="at">y=</span><span class="st">"Defensive Rating"</span>)  <span class="sc">+</span> </span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">109</span>, <span class="at">y=</span><span class="dv">118</span>, <span class="at">label=</span><span class="st">"Bad Offense, Bad Defense"</span>), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="dv">131</span>, <span class="at">y=</span><span class="dv">104</span>, <span class="at">label=</span><span class="st">"Great Defense, Great Offense"</span>), <span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">size =</span> <span class="fu">guide_legend</span>(<span class="at">override.aes =</span> <span class="fu">list</span>(<span class="at">color =</span> <span class="st">"black"</span>))) <span class="sc">+</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>), </span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">10</span>), </span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>If you’re reading this right now Collin I apologize but my attention is currently needed elsewhere. John Bender calls and he has a rather angry ringtone</p>
+<p>A win share is a statistic which tries to divvy up team success by giving credit to the individuals on that team. Essentially, it is a combination of how a players offensive and defensive play helps their team to either win or lose. The larger the number the better and the smaller the number becomes… lets just say that you might receive a phone call from the Shanghai Sharks. To put it in perspective, Kareem Abdul-Jabbar’s total of 25.4 Win Shares in 1971-72 is the all-time single-season record and his 273.4 career Win Shares are the all-time career record.</p>
+<p>Joel Embiid was named the 2022-23 NBA MVP and I included him in this chart as a reference point. He was largely the most dominant player this season so I wanted to see how Giannis and Davis compared. Embiid finished with an offensive rating of 124 which is rather impressive given the workload he faces in Philadelphia. His defensive rating was 109 which slots him between Mitchell Robinson and DPOY runner up Brook Lopez. Embiid was credited with 12.3 win shares and you would expect that from the league MVP.</p>
+<p>Giannis finished with an Ortg of 117 ,Drtg of 107.8, and was credited with 8.6 win shares. I would have expected his Ortg to be higher given his increased usage rating this season but his defensive rating remains elite. He finished in the top five of big men and his win shares are understandable when you consider the elevated role that Jrue Holiday took for Milwaukee this season.</p>
+<p>Davis finished with an Ortg of 124, Drtg of 106.5 and was credited with 9 win shares. His defensive rating of 106.5 is the third best across the league and was certainly crucial for the Lakers to secure a spot in the playoffs. His offensive rating can be contributed to his increased efficiency this season as he saw a massive jump in his field goal percentage. His role as a closer for the Lakers has translated to some impressive stats</p>
+<p>So far we have only looked at regular season stats so lets look at where it really matters, the Playoffs. Ive created a playoff rating score which tallies up points per game with field goal percentage then adds the players average rebounds and assists. That number is then divided by the combined turnovers and fouls a player averages and results in our playoff rating. We will take a look at how Giannis and Anthony Davis compare to other great power forwards and to the playoff legend himself, LeBron James.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -422,8 +431,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">PlayoffRating =</span> <span class="st">"Playoff Rating"</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">""</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"xx"</span>)  <span class="sc">%&gt;%</span> </span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Lakers duo excells during the playoffs"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Despite playing fewer games, LeBron could not have found a better teammate"</span>)  <span class="sc">%&gt;%</span> </span>
 <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
 <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">weight =</span> <span class="st">"bold"</span>, <span class="at">align =</span> <span class="st">"left"</span>),</span>
 <span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_title</span>(<span class="st">"title"</span>)</span>
@@ -446,29 +455,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">opt_table_lines</span>(<span class="st">"none"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
 <span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"gold"</span>),</span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"navy"</span>)</span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#552583"</span>),</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"#FDB927"</span>)</span>
 <span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>      ),</span>
 <span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(</span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">rows =</span> Player <span class="sc">==</span> <span class="st">"Dirk Nowitzki"</span>)</span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>      <span class="at">rows =</span> Player <span class="sc">==</span> <span class="st">"Anthony Davis"</span>)</span>
 <span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
 <span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_style</span>(</span>
 <span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="fu">list</span>(</span>
-<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"blue"</span>),</span>
-<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"yellow"</span>)</span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_fill</span>(<span class="at">color =</span> <span class="st">"#00471B"</span>),</span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>      <span class="fu">cell_text</span>(<span class="at">color =</span> <span class="st">"#EEE1C6"</span>)</span>
 <span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>      ),</span>
 <span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">locations =</span> <span class="fu">cells_body</span>(</span>
-<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">rows =</span> Player <span class="sc">==</span> <span class="st">"Anthony Davis"</span>)</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">rows =</span> Player <span class="sc">==</span> <span class="st">"Giannis Antetokounmpo"</span>)</span>
 <span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 
-<div id="hwyszflvdn" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="yqvmhkiatj" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-:where(#hwyszflvdn) .gt_table {
+:where(#yqvmhkiatj) .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -493,7 +502,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-left-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_heading {
+:where(#yqvmhkiatj) .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -505,7 +514,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_title {
+:where(#yqvmhkiatj) .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -517,7 +526,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-width: 0;
 }
 
-:where(#hwyszflvdn) .gt_subtitle {
+:where(#yqvmhkiatj) .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -529,13 +538,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-width: 0;
 }
 
-:where(#hwyszflvdn) .gt_bottom_border {
+:where(#yqvmhkiatj) .gt_bottom_border {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_col_headings {
+:where(#yqvmhkiatj) .gt_col_headings {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -550,7 +559,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_col_heading {
+:where(#yqvmhkiatj) .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -570,7 +579,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#hwyszflvdn) .gt_column_spanner_outer {
+:where(#yqvmhkiatj) .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -582,15 +591,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 4px;
 }
 
-:where(#hwyszflvdn) .gt_column_spanner_outer:first-child {
+:where(#yqvmhkiatj) .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-:where(#hwyszflvdn) .gt_column_spanner_outer:last-child {
+:where(#yqvmhkiatj) .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-:where(#hwyszflvdn) .gt_column_spanner {
+:where(#yqvmhkiatj) .gt_column_spanner {
   border-bottom-style: none;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -602,7 +611,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   width: 100%;
 }
 
-:where(#hwyszflvdn) .gt_group_heading {
+:where(#yqvmhkiatj) .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -627,7 +636,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#hwyszflvdn) .gt_empty_group_heading {
+:where(#yqvmhkiatj) .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -642,15 +651,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: middle;
 }
 
-:where(#hwyszflvdn) .gt_from_md > :first-child {
+:where(#yqvmhkiatj) .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-:where(#hwyszflvdn) .gt_from_md > :last-child {
+:where(#yqvmhkiatj) .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-:where(#hwyszflvdn) .gt_row {
+:where(#yqvmhkiatj) .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -669,7 +678,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   overflow-x: hidden;
 }
 
-:where(#hwyszflvdn) .gt_stub {
+:where(#yqvmhkiatj) .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -682,7 +691,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#hwyszflvdn) .gt_stub_row_group {
+:where(#yqvmhkiatj) .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -696,11 +705,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   vertical-align: top;
 }
 
-:where(#hwyszflvdn) .gt_row_group_first td {
+:where(#yqvmhkiatj) .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-:where(#hwyszflvdn) .gt_summary_row {
+:where(#yqvmhkiatj) .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -710,16 +719,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#hwyszflvdn) .gt_first_summary_row {
+:where(#yqvmhkiatj) .gt_first_summary_row {
   border-top-style: none;
   border-top-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_first_summary_row.thick {
+:where(#yqvmhkiatj) .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-:where(#hwyszflvdn) .gt_last_summary_row {
+:where(#yqvmhkiatj) .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -729,7 +738,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_grand_summary_row {
+:where(#yqvmhkiatj) .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -739,7 +748,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#hwyszflvdn) .gt_first_grand_summary_row {
+:where(#yqvmhkiatj) .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -749,11 +758,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-top-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_striped {
+:where(#yqvmhkiatj) .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-:where(#hwyszflvdn) .gt_table_body {
+:where(#yqvmhkiatj) .gt_table_body {
   border-top-style: none;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -762,7 +771,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-bottom-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_footnotes {
+:where(#yqvmhkiatj) .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -776,7 +785,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_footnote {
+:where(#yqvmhkiatj) .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -785,7 +794,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#hwyszflvdn) .gt_sourcenotes {
+:where(#yqvmhkiatj) .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -799,7 +808,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   border-right-color: #D3D3D3;
 }
 
-:where(#hwyszflvdn) .gt_sourcenote {
+:where(#yqvmhkiatj) .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -807,74 +816,74 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   padding-right: 5px;
 }
 
-:where(#hwyszflvdn) .gt_left {
+:where(#yqvmhkiatj) .gt_left {
   text-align: left;
 }
 
-:where(#hwyszflvdn) .gt_center {
+:where(#yqvmhkiatj) .gt_center {
   text-align: center;
 }
 
-:where(#hwyszflvdn) .gt_right {
+:where(#yqvmhkiatj) .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-:where(#hwyszflvdn) .gt_font_normal {
+:where(#yqvmhkiatj) .gt_font_normal {
   font-weight: normal;
 }
 
-:where(#hwyszflvdn) .gt_font_bold {
+:where(#yqvmhkiatj) .gt_font_bold {
   font-weight: bold;
 }
 
-:where(#hwyszflvdn) .gt_font_italic {
+:where(#yqvmhkiatj) .gt_font_italic {
   font-style: italic;
 }
 
-:where(#hwyszflvdn) .gt_super {
+:where(#yqvmhkiatj) .gt_super {
   font-size: 65%;
 }
 
-:where(#hwyszflvdn) .gt_footnote_marks {
+:where(#yqvmhkiatj) .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-:where(#hwyszflvdn) .gt_asterisk {
+:where(#yqvmhkiatj) .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-:where(#hwyszflvdn) .gt_indent_1 {
+:where(#yqvmhkiatj) .gt_indent_1 {
   text-indent: 5px;
 }
 
-:where(#hwyszflvdn) .gt_indent_2 {
+:where(#yqvmhkiatj) .gt_indent_2 {
   text-indent: 10px;
 }
 
-:where(#hwyszflvdn) .gt_indent_3 {
+:where(#yqvmhkiatj) .gt_indent_3 {
   text-indent: 15px;
 }
 
-:where(#hwyszflvdn) .gt_indent_4 {
+:where(#yqvmhkiatj) .gt_indent_4 {
   text-indent: 20px;
 }
 
-:where(#hwyszflvdn) .gt_indent_5 {
+:where(#yqvmhkiatj) .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
 <table class="gt_table">
   <thead class="gt_header">
     <tr>
-      <td colspan="4" class="gt_heading gt_title gt_font_normal" style="color: #000000; text-align: left; font-weight: bold;"></td>
+      <td colspan="4" class="gt_heading gt_title gt_font_normal" style="color: #000000; text-align: left; font-weight: bold;">Lakers duo excells during the playoffs</td>
     </tr>
     <tr>
-      <td colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="color: #000000; text-align: left;">xx</td>
+      <td colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="color: #000000; text-align: left;">Despite playing fewer games, LeBron could not have found a better teammate</td>
     </tr>
   </thead>
   <thead class="gt_col_headings">
@@ -886,22 +895,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     </tr>
   </thead>
   <tbody class="gt_table_body">
-    <tr><td class="gt_row gt_left" style="background-color: #0000FF; color: #FFFF00;">Anthony Davis</td>
-<td class="gt_row gt_right" style="background-color: #0000FF; color: #FFFF00;">47</td>
-<td class="gt_row gt_right" style="background-color: #0000FF; color: #FFFF00;">26.2</td>
-<td class="gt_row gt_right" style="background-color: #0000FF; color: #FFFF00;">5.419294</td></tr>
+    <tr><td class="gt_row gt_left" style="background-color: #552583; color: #FDB927;">Anthony Davis</td>
+<td class="gt_row gt_right" style="background-color: #552583; color: #FDB927;">47</td>
+<td class="gt_row gt_right" style="background-color: #552583; color: #FDB927;">26.2</td>
+<td class="gt_row gt_right" style="background-color: #552583; color: #FDB927;">5.419294</td></tr>
     <tr><td class="gt_row gt_left gt_striped">LeBron James</td>
 <td class="gt_row gt_right gt_striped">275</td>
 <td class="gt_row gt_right gt_striped">28.5</td>
 <td class="gt_row gt_right gt_striped">5.119915</td></tr>
-    <tr><td class="gt_row gt_left" style="background-color: #FFD700; color: #000080;">Dirk Nowitzki</td>
-<td class="gt_row gt_right" style="background-color: #FFD700; color: #000080;">145</td>
-<td class="gt_row gt_right" style="background-color: #FFD700; color: #000080;">25.3</td>
-<td class="gt_row gt_right" style="background-color: #FFD700; color: #000080;">4.742863</td></tr>
-    <tr><td class="gt_row gt_left gt_striped">Giannis Antetokounmpo</td>
-<td class="gt_row gt_right gt_striped">79</td>
-<td class="gt_row gt_right gt_striped">26.6</td>
-<td class="gt_row gt_right gt_striped">4.730030</td></tr>
+    <tr><td class="gt_row gt_left">Dirk Nowitzki</td>
+<td class="gt_row gt_right">145</td>
+<td class="gt_row gt_right">25.3</td>
+<td class="gt_row gt_right">4.742863</td></tr>
+    <tr><td class="gt_row gt_left gt_striped" style="background-color: #00471B; color: #EEE1C6;">Giannis Antetokounmpo</td>
+<td class="gt_row gt_right gt_striped" style="background-color: #00471B; color: #EEE1C6;">79</td>
+<td class="gt_row gt_right gt_striped" style="background-color: #00471B; color: #EEE1C6;">26.6</td>
+<td class="gt_row gt_right gt_striped" style="background-color: #00471B; color: #EEE1C6;">4.730030</td></tr>
     <tr><td class="gt_row gt_left">Tim Duncan</td>
 <td class="gt_row gt_right">251</td>
 <td class="gt_row gt_right">20.6</td>
@@ -937,6 +946,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </div>
+<p>When it comes to my playoff score, Anthony Davis leads some of the greatest power forwards of all time. However, it is difficult to asses how truthful that stat is when he by far has the smallest sample size of games. Regardless, his playoff numbers have been impressive and his play helped the Lakers win it all in 2020.</p>
+<p>Giannis rests between two of the greatest to ever do it in Dirk Nowitzki and Tim Duncan. Duncan has the second most games played among this group but never had to face a workload like Giannis did offensively. That’s simply a testament to how great those Spurs teams where.</p>
+<p>After looking at the stats these two players are far more similar than I had expected them to be. Their numbers are often comparable to one another. Giannis has taken the next step forward and began to leave Davis behind. Now that Davis is getting healthier his stats are beginning to trend towards the elite playstyle of the Anthony Davis we all grew to love in New Orleans. Davis is a master of the mid-range and commands his presence around the rim. Giannis flies around the court and does everything with a full head of steam. It may be impossible to determine who is actually better at the sport of basketball without a matchup between them in the playoffs.</p>
 
 
 
